@@ -10,7 +10,7 @@ class Cdpss < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.0/chromedp-screenshots_0.0.0_macOS_x86_64.zip"
-      sha256 "4ff45e485658bd06560ee78efc7bf9560c182b27e5eafaf49dae09ede53af87d"
+      sha256 "f9398a02f6fe17e0d473b4780ed30191a2a1bbe27e0e2adb7af60481c44c7306"
 
       define_method(:install) do
         bin.install "cdpss"
@@ -18,7 +18,7 @@ class Cdpss < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.0/chromedp-screenshots_0.0.0_macOS_arm64.zip"
-      sha256 "65cc57a35cdd9f092e7a0e662bcf46b4568abb4f95a3b02367ba94f8a9c6db37"
+      sha256 "ae2352a85fbe4fc6ddb9ed76de6c3ebc9626da0499fbcc99ae221d91c5ff6af9"
 
       define_method(:install) do
         bin.install "cdpss"
@@ -29,14 +29,14 @@ class Cdpss < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.0/chromedp-screenshots_0.0.0_Linux_x86_64.zip"
-      sha256 "926561c876232c3e63275d888bf8284853c2ddfdc6259976564e75ae1d40c32b"
+      sha256 "11a5384776ef2b1d6a8ae4a46f3f719d6e09ea71f4583331df778ccfa8a59b2d"
       define_method(:install) do
         bin.install "cdpss"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.0/chromedp-screenshots_0.0.0_Linux_arm64.zip"
-      sha256 "ecb1dcd590e82aa0ad28d5786d173d5fe24226c78c6e762a73f5bb31fd579c54"
+      sha256 "0208ddbe23df6a55c8e8d2997c5a318ca48bec2e3325a34f93a2f384f2983e55"
       define_method(:install) do
         bin.install "cdpss"
       end
