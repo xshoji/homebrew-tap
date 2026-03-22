@@ -5,31 +5,38 @@
 class Imgdiff < Formula
   desc "Detect and visualize differences between two images"
   homepage "https://github.com/xshoji/go-img-diff"
-  version "0.0.6"
+  version "0.0.7"
 
   on_macos do
-    url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.6/go-img-diff_0.0.6_macOS_x86_64.zip"
-    sha256 "8969d6944e95230757d6d0ab3373d878aec3e912673faf6333f36a3f5c394021"
+    if Hardware::CPU.intel?
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_macOS_x86_64.zip"
+      sha256 "9f59ed1a62f1f03122d679ab41e46be036b25ebbe181889a468c8c95a8e412a8"
 
-    define_method(:install) do
-      bin.install "imgdiff"
+      define_method(:install) do
+        bin.install "imgdiff"
+      end
     end
-
     if Hardware::CPU.arm?
-      def caveats
-        <<~EOS
-          The darwin_arm64 architecture is not supported for the Imgdiff
-          formula at this time. The darwin_amd64 binary may work in compatibility
-          mode, but it might not be fully supported.
-        EOS
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_macOS_arm64.zip"
+      sha256 "5266f2927384acc6c6bfa56c11941bf6b0b135d97b441b679a4e92f767c784f0"
+
+      define_method(:install) do
+        bin.install "imgdiff"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.6/go-img-diff_0.0.6_Linux_x86_64.zip"
-      sha256 "9f35d2925375405c7d87286722b3e0f475d198e6e53fd728ff64187801b8eaff"
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_Linux_x86_64.zip"
+      sha256 "fbf4d96827835722591b590e0c1bea9eb9476bd0ea08620fff940c53303a87c3"
+      define_method(:install) do
+        bin.install "imgdiff"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_Linux_arm64.zip"
+      sha256 "4f1ee2f9b2d015fc009673e1dc0cc0b5a7936a32240c8381407528755e6d84a5"
       define_method(:install) do
         bin.install "imgdiff"
       end
