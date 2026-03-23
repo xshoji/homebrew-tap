@@ -5,20 +5,20 @@
 class Cds < Formula
   desc "A web page screenshot tool with parallel multi-URL capture and lock-free Chrome profile support, powered by chromedp (headless Chrome). Only Chrome is required — no Puppeteer, no Playwright, no Node.js, no Python."
   homepage "https://github.com/xshoji/chromedp-screenshots"
-  version "0.0.1"
+  version "0.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.1/chromedp-screenshots_0.0.1_macOS_x86_64.zip"
-      sha256 "d1f959f45571a6bb4592809f8e82e5881893e74afbc3ce471d9d2b37f3fb91dc"
+      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.2/chromedp-screenshots_0.0.2_macOS_x86_64.zip"
+      sha256 "b25428be28e16264739708ac165dd2e6c42433fbcc6927f6370535a3cbaab6ad"
 
       define_method(:install) do
         bin.install "cds"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.1/chromedp-screenshots_0.0.1_macOS_arm64.zip"
-      sha256 "72af19a63649a494c8dee777672f7c365e196a7172dfad50a82b109cadfdaabd"
+      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.2/chromedp-screenshots_0.0.2_macOS_arm64.zip"
+      sha256 "795e77b033a4e7039295824db2cbf953a38aae0d51af8780ac31f9a2429b0f17"
 
       define_method(:install) do
         bin.install "cds"
@@ -28,15 +28,15 @@ class Cds < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.1/chromedp-screenshots_0.0.1_Linux_x86_64.zip"
-      sha256 "ee869d344e936b7973d4537dc40e1438dc56cd9ec9adb0f1a0f9a8be24bfb056"
+      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.2/chromedp-screenshots_0.0.2_Linux_x86_64.zip"
+      sha256 "a00d3bd47d285389c65365af40691b042757718f171929134a3df650c883f99a"
       define_method(:install) do
         bin.install "cds"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.1/chromedp-screenshots_0.0.1_Linux_arm64.zip"
-      sha256 "bb37fe95d36af213023baebd888807ceb5ecbb3586de9056b47bdc56df6d375d"
+      url "https://github.com/xshoji/chromedp-screenshots/releases/download/v0.0.2/chromedp-screenshots_0.0.2_Linux_arm64.zip"
+      sha256 "5d03bce1240b309c05dba59a80543930b4fa897243635aa1bedeb9fef4a70117"
       define_method(:install) do
         bin.install "cds"
       end
