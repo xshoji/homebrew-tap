@@ -5,20 +5,20 @@
 class Sitesnap < Formula
   desc "A web page screenshot tool with parallel multi-URL capture and lock-free Chrome profile support, powered by chromedp (headless Chrome). Only Chrome is required — no Puppeteer, no Playwright, no Node.js, no Python."
   homepage "https://github.com/xshoji/sitesnap"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.0/sitesnap_0.1.0_macOS_x86_64.zip"
-      sha256 "de13d1cc18b7c0f3b524ffeb5aa4b84e2538e063e2e2fa2bbbbfa4040e18389f"
+      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.1/sitesnap_0.1.1_macOS_x86_64.zip"
+      sha256 "c0425e716bfdbdc5020043a7641388ab73582b4ae66e88301f6cc29f5f6e2870"
 
       define_method(:install) do
         bin.install "sitesnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.0/sitesnap_0.1.0_macOS_arm64.zip"
-      sha256 "a13c3a04d9baf41655788a4c899abda15ea4ae2dbd22f498fcc2081cb6ef6cdc"
+      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.1/sitesnap_0.1.1_macOS_arm64.zip"
+      sha256 "c5a294d3543ffb08ec531e8c67f92d64491f61c7bb5a3bc7bfe3e16137f28c49"
 
       define_method(:install) do
         bin.install "sitesnap"
@@ -28,15 +28,15 @@ class Sitesnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.0/sitesnap_0.1.0_Linux_x86_64.zip"
-      sha256 "44f29080b8eb8504e4b45b03c5d10cca770a6dc0e4b6bb7d9f6b1b5bb0ed5c2a"
+      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.1/sitesnap_0.1.1_Linux_x86_64.zip"
+      sha256 "d9e9137918456cb224d7bae7768232fd963542ceae40d6f0d92036e6d751aaad"
       define_method(:install) do
         bin.install "sitesnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.0/sitesnap_0.1.0_Linux_arm64.zip"
-      sha256 "b1ce26ca9fe3954977e0af2a27b5a105fe1df6e60be1eef2335ba1530c78bb6b"
+      url "https://github.com/xshoji/sitesnap/releases/download/v0.1.1/sitesnap_0.1.1_Linux_arm64.zip"
+      sha256 "74361333400f964e4fc4d204c6658c157da6404e2c5fe5af7bd098f960616afa"
       define_method(:install) do
         bin.install "sitesnap"
       end
