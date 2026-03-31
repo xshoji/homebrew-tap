@@ -5,20 +5,20 @@
 class Sesnap < Formula
   desc "A web page screenshot tool with parallel multi-URL capture and lock-free Chrome profile support, powered by chromedp (headless Chrome). Only Chrome is required — no Puppeteer, no Playwright, no Node.js, no Python."
   homepage "https://github.com/xshoji/sesnap"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xshoji/sesnap/releases/download/v0.1.0/sesnap_0.1.0_macOS_x86_64.zip"
-      sha256 "ffa41ebcc95e10dbe773925ffa544225e61bb35dc8d40e36160a3b1ed792536b"
+      url "https://github.com/xshoji/sesnap/releases/download/v0.1.1/sesnap_0.1.1_macOS_x86_64.zip"
+      sha256 "4d849833081d12f3dc3e7274729e601a21c99a533063f41cdac62b8c8502ad38"
 
       define_method(:install) do
         bin.install "sesnap"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xshoji/sesnap/releases/download/v0.1.0/sesnap_0.1.0_macOS_arm64.zip"
-      sha256 "02f6eb30ad2e33cbb14987c49e2868e6302f53543cc8057ba1440de95a6f128b"
+      url "https://github.com/xshoji/sesnap/releases/download/v0.1.1/sesnap_0.1.1_macOS_arm64.zip"
+      sha256 "0c5cb3e3e76223bc56fe759873535a3700d9b10879d941aafe4a8ed0d2b615a5"
 
       define_method(:install) do
         bin.install "sesnap"
@@ -28,15 +28,15 @@ class Sesnap < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/sesnap/releases/download/v0.1.0/sesnap_0.1.0_Linux_x86_64.zip"
-      sha256 "3cfc8133d07b89b7eceb1c26f5872a825f6a48fa582dcd64e54c265ac5cda78a"
+      url "https://github.com/xshoji/sesnap/releases/download/v0.1.1/sesnap_0.1.1_Linux_x86_64.zip"
+      sha256 "868b2c8caadeadb0616038adda2696d1e1f744ee94baf0f499d5722a0275a883"
       define_method(:install) do
         bin.install "sesnap"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/sesnap/releases/download/v0.1.0/sesnap_0.1.0_Linux_arm64.zip"
-      sha256 "d1c85b3f7830c30993fd0e1f541246614c275320474dc5a78d71723c67e6028b"
+      url "https://github.com/xshoji/sesnap/releases/download/v0.1.1/sesnap_0.1.1_Linux_arm64.zip"
+      sha256 "c260cf9a3cc88fc61321bfe9cad2f82d0051d37f9ed008698efeee46604f6b83"
       define_method(:install) do
         bin.install "sesnap"
       end
