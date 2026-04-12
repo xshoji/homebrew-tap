@@ -5,20 +5,20 @@
 class Imgdiff < Formula
   desc "Detect and visualize differences between two images"
   homepage "https://github.com/xshoji/go-img-diff"
-  version "0.0.7"
+  version "0.1.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_macOS_x86_64.zip"
-      sha256 "9f59ed1a62f1f03122d679ab41e46be036b25ebbe181889a468c8c95a8e412a8"
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.1.0/go-img-diff_0.1.0_macOS_x86_64.zip"
+      sha256 "c96facb8982f3c942d59c12fae7433e88ec6f273201765893150cbf5effa1239"
 
       define_method(:install) do
         bin.install "imgdiff"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_macOS_arm64.zip"
-      sha256 "5266f2927384acc6c6bfa56c11941bf6b0b135d97b441b679a4e92f767c784f0"
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.1.0/go-img-diff_0.1.0_macOS_arm64.zip"
+      sha256 "cc93c84e41fafcf397ea8465494098166f237623b7e6aa78191e4b26c2215c17"
 
       define_method(:install) do
         bin.install "imgdiff"
@@ -28,15 +28,15 @@ class Imgdiff < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_Linux_x86_64.zip"
-      sha256 "fbf4d96827835722591b590e0c1bea9eb9476bd0ea08620fff940c53303a87c3"
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.1.0/go-img-diff_0.1.0_Linux_x86_64.zip"
+      sha256 "5a5c0d979b4016112f115584d4bde4ad6efcc58fc7ea70ba39ba8af7214b48e1"
       define_method(:install) do
         bin.install "imgdiff"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/xshoji/go-img-diff/releases/download/v0.0.7/go-img-diff_0.0.7_Linux_arm64.zip"
-      sha256 "4f1ee2f9b2d015fc009673e1dc0cc0b5a7936a32240c8381407528755e6d84a5"
+      url "https://github.com/xshoji/go-img-diff/releases/download/v0.1.0/go-img-diff_0.1.0_Linux_arm64.zip"
+      sha256 "5d2edeca5c474feefc2a8dd342fb0f46b7fa781d9165549ef858867ba18c473b"
       define_method(:install) do
         bin.install "imgdiff"
       end
