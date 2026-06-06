@@ -4,22 +4,22 @@ cask "althosts" do
 
   on_macos do
     on_intel do
-      sha256 "522f433478dabfbc86850d7e5518286a2740cd6948919f30c8a1c9c380e03988"
+      sha256 "20f637a212385c3b6c220583f0b3490651619e390192438e05a17325eb47304d"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_macOS_x86_64.zip"
     end
     on_arm do
-      sha256 "2e50d44ff0b86db2b2385c74e18fc90c335ed8e883e41d6dde4a04436b1f7a49"
+      sha256 "c4e7dc0647620aa9057cc6fa30b069a2cfc073854e8b2b17253eb8e1fe776de4"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_macOS_arm64.zip"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "33632e649f88aa0ee1d5e9002c18ecca94a7f2bcc43de5f6f4fa77a5dfd1dc4f"
+      sha256 "bff7cce981a57effbf7294542b93f3e4312966592501b5a3d318fc9f7146fff8"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_Linux_x86_64.zip"
     end
     on_arm do
-      sha256 "839d4b0ff7dff9bebb823e6d3af1a1da82a8a689afd606d5a3877c65d9ac171d"
+      sha256 "4d7047b0299f8a4646defa9f86976c6acf6a0c2d6fcdac8d9e9d6e709b771bba"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_Linux_arm64.zip"
     end
   end
@@ -33,6 +33,13 @@ cask "althosts" do
   end
 
   binary "althosts"
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr",
+        args: ["-dr", "com.apple.quarantine", "#{staged_path}/althosts"]
+    end
+  end
 
   # No zap stanza required
 
