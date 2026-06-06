@@ -4,22 +4,22 @@ cask "althosts" do
 
   on_macos do
     on_intel do
-      sha256 "20f637a212385c3b6c220583f0b3490651619e390192438e05a17325eb47304d"
+      sha256 "25e33f9ebbb8914db783d97ac5a21c38e056c229439dcaa60f5e189bc65159aa"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_macOS_x86_64.zip"
     end
     on_arm do
-      sha256 "c4e7dc0647620aa9057cc6fa30b069a2cfc073854e8b2b17253eb8e1fe776de4"
+      sha256 "847454c29e1968c3a28bae91985a3a4138c8a75295aac7b40e05c3c12ed24ccf"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_macOS_arm64.zip"
     end
   end
 
   on_linux do
     on_intel do
-      sha256 "bff7cce981a57effbf7294542b93f3e4312966592501b5a3d318fc9f7146fff8"
+      sha256 "b7512c6a14bd01f129aaec346291a23c253b249ac5a602313dd33ffb374e58a9"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_Linux_x86_64.zip"
     end
     on_arm do
-      sha256 "4d7047b0299f8a4646defa9f86976c6acf6a0c2d6fcdac8d9e9d6e709b771bba"
+      sha256 "d66de43d6e51b1a259c9790af879bc157f34f43b064a93be7df9440f684a8592"
       url "https://github.com/xshoji/althosts/releases/download/#{version}/althosts_#{version}_Linux_arm64.zip"
     end
   end
