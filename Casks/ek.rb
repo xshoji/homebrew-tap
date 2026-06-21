@@ -4,11 +4,11 @@ cask "ek" do
 
   on_macos do
     on_intel do
-      sha256 "8f83bbaa866e39a3a6d39d5fa6aac8cf26c2e926694ce00cc3fed348fc2ac9a9"
+      sha256 "fa47b9cc980e3290b1d9abd47292ca289992eae43b3cb2677530e70ac788504d"
       url "https://github.com/xshoji/go-encrypted-text-kvs/releases/download/#{version}/go-encrypted-text-kvs_#{version}_macOS_x86_64.zip"
     end
     on_arm do
-      sha256 "00342b911c6ff2d18badd8de3b87b073176497d3556a48232d6d311f022e3096"
+      sha256 "f8d9aa5aa55b29083c433553771a50946feef091386a633818b9b6ac455a4a19"
       url "https://github.com/xshoji/go-encrypted-text-kvs/releases/download/#{version}/go-encrypted-text-kvs_#{version}_macOS_arm64.zip"
     end
   end
