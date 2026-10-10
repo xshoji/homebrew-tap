@@ -4,21 +4,21 @@ cask "sesnap" do
 
   on_macos do
     on_arm do
-      sha256 "7b369cf63086a58d61bc6763fc55b4b4d09a338417dbc838fa6f64da27da1d23"
+      sha256 "308399de7ffc59c83b03d9f56b8f0b74df46ac26f270b71d594d75d6d271fe12"
       url "https://github.com/xshoji/sesnap/releases/download/v#{version}/sesnap_#{version}_macOS_arm64.zip"
     end
     on_intel do
-      sha256 "847ce25cbc53df464bc3e8f34051932821a3c76aa1c5ba819054182eff3dc724"
+      sha256 "dc4e5e31a2f4340605fac1aed762c787a40a4575ba3c4a19f504b4bd913eb3b5"
       url "https://github.com/xshoji/sesnap/releases/download/v#{version}/sesnap_#{version}_macOS_x86_64.zip"
     end
   end
   on_linux do
     on_arm do
-      sha256 "b3e2a5c477f08cfe9d206dc4589a8293cebe9160d7faeae3d5a377993c792254"
+      sha256 "cce3f2da37445baf05e7893b765f67ee2304c64a520eb1a60f41e6212a6a6011"
       url "https://github.com/xshoji/sesnap/releases/download/v#{version}/sesnap_#{version}_Linux_arm64.zip"
     end
     on_intel do
-      sha256 "990ddb070d15926b707e2b0d4045c2f4349e451682d2914d102d3a040da82e34"
+      sha256 "98898f9919b65a7ffcc36fa7e58e0d6481269a81ac69d05bd7b68362581f1133"
       url "https://github.com/xshoji/sesnap/releases/download/v#{version}/sesnap_#{version}_Linux_x86_64.zip"
     end
   end
